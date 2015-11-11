@@ -1,0 +1,12 @@
+{
+    "require": {
+        "propel/propel": "~2.0@dev",
+        "slim/slim": "^2.6",
+        "slim/views": "^0.1.3",
+        "twig/twig": "^1.23"
+    },
+
+    "autoload": {
+        "classmap": ["src", "example/model"]
+    }
+}

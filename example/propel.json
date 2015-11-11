@@ -1,0 +1,29 @@
+{
+  "propel": {
+    "paths": {
+      "outputDir": "./",
+      "phpDir": "./model",
+      "sqlDir": "./sql",
+      "phpConfDir": "./conf"
+    },
+    "database": {
+      "connections": {
+        "bookstore": {
+          "adapter": "mysql",
+          "dsn": "mysql:host=localhost;dbname=propeltoslim_example",
+          "user": "root",
+          "password": "password",
+          "attributes": []
+        }
+      }
+    },
+    "runtime": {
+      "defaultConnection": "bookstore",
+      "connections": ["bookstore"]
+    },
+    "generator": {
+      "defaultConnection": "bookstore",
+      "connections": ["bookstore"]
+    }
+  }
+}
