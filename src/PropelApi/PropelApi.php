@@ -16,7 +16,6 @@ class PropelApi {
     public function __construct ($app, $pathToSchema) {
         $this->slimApp =  $app;
         $this->pathToSchema = $pathToSchema;
-        $this->loadSchema();
         $this->responseObject = new ResponseObject\JsonResponseObject();
     }
 
@@ -24,11 +23,7 @@ class PropelApi {
         $this->exclusionList = $exclusionArray;
     }
 
-    public function loadSchema () {
-        $schemaObject = simplexml_load_file($this->pathToSchema);
-        $this->schema = $schemaObject;
-        $this->modelNameSpace = $this->schema['namespace'];
-    }
+
 
     public function generateRoutes () {
         foreach($this->schema->table as $table) {

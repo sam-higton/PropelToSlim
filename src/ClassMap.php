@@ -28,9 +28,9 @@ class ClassMap {
 
     public function loadPropelTableMap($name, $namespace = false) {
         if($namespace) {
-            $mapString = $this->namespace . "\\Map\\" . $name . "TableMap";
+            $mapString = $namespace . "\\Map\\" . $name . "TableMap";
         } else {
-            $mapString = $this->namespace . "\\Map\\" . $name . "TableMap";
+            $mapString = "Map\\" . $name . "TableMap";
         }
         $this->propelTableMap = $mapString::getTableMap();
 
